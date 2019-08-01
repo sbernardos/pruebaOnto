@@ -1,0 +1,14 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "base:Writer" "base:Poem" "base:Book" ; /*classes style*/
+	"base:Writer1" -> "base:Poem1" [ label = "base:writtes" ];
+	"base:Book" -> "base:Poem" [ label = "owl:disjointWith" ];
+	"NULL" -> "base:Book" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:writtes" [ label = "owl:onProperty" ];
+	"NULL" -> "base:Writer" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "base:isWritenBy" [ label = "owl:onProperty" ];
+	"base:Writer" -> "xsd:string" [ label = "base:writerName" ];
+	"base:Writer" -> "base:Book" [ label = "base:writtes" ];
+
+}

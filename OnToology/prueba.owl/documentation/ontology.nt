@@ -1,0 +1,117 @@
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology> <http://purl.org/dc/elements/1.1/creator> "Socorro"@en .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology> <http://purl.org/dc/terms/license> "yyy"@en .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology> <http://www.w3.org/2000/01/rdf-schema#comment> "xxxxx"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#isWritenBy
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#isWritenBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#isWritenBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writtes> .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#isWritenBy> <http://www.w3.org/2000/01/rdf-schema#label> "isWritenBy"@en .
+# 
+# http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writtes
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writtes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writtes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Writer> .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writtes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book> .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writtes> <http://www.w3.org/2000/01/rdf-schema#label> "writes"@es .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writerName
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writerName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writerName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Writer> .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writerName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writerName> <http://www.w3.org/2000/01/rdf-schema#comment> "name of a writer"@en .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writerName> <http://www.w3.org/2000/01/rdf-schema#label> "writerName"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://schema.org/Book
+<http://schema.org/Book> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#isWritenBy> .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Writer> .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Poem> .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book> <http://www.w3.org/2000/01/rdf-schema#comment> "bla bla bla"@es .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book> <http://www.w3.org/2000/01/rdf-schema#label> "Book"@en .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book> <http://www.w3.org/2000/01/rdf-schema#label> "Libro"@es .
+# 
+# http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Comic
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Comic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Comic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book> .
+# 
+# http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Poem
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Poem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Poem> <http://www.w3.org/2000/01/rdf-schema#comment> "represents a poem"@en .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Poem> <http://www.w3.org/2000/01/rdf-schema#label> "Poem"@en .
+# 
+# http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Writer
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Writer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Writer> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writtes> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book1
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book> .
+# 
+# http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Poem1
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Poem1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Poem1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Poem> .
+# 
+# http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Writer1
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Writer1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Writer1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Writer> .
+<http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Writer1> <http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writtes> <http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Poem1> .
+# 
+# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
