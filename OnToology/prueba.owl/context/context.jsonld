@@ -1,0 +1,40 @@
+{
+  "@context" : {
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "isWritenBy" : {
+      "@id" : "http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#isWritenBy",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Poem" : {
+      "@id" : "http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Poem"
+    },
+    "writtes" : {
+      "@id" : "http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writtes",
+      "@type" : "@id"
+    },
+    "Writer" : {
+      "@id" : "http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Writer"
+    },
+    "Book" : {
+      "@id" : "http://schema.org/Book"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "Comic" : {
+      "@id" : "http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Comic"
+    },
+    "writerName" : {
+      "@id" : "http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writerName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    }
+  }
+}

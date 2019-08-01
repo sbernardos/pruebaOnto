@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#"
+     xml:base="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:bookontology="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology">
+        <dc:creator xml:lang="en">Socorro</dc:creator>
+        <terms:license xml:lang="en">yyy</terms:license>
+        <rdfs:comment xml:lang="en">xxxxx</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#isWritenBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#isWritenBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writtes"/>
+        <rdfs:label xml:lang="en">isWritenBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writtes -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writtes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Writer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book"/>
+        <rdfs:label xml:lang="es">writes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writerName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writerName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Writer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">name of a writer</rdfs:comment>
+        <rdfs:label xml:lang="en">writerName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://schema.org/Book -->
+
+
+    <owl:Class rdf:about="http://schema.org/Book"/>
+    
+
+
+    <!-- http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#isWritenBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Writer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Poem"/>
+        <rdfs:comment xml:lang="es">bla bla bla</rdfs:comment>
+        <rdfs:label xml:lang="en">Book</rdfs:label>
+        <rdfs:label xml:lang="es">Libro</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Comic -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Comic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Poem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Poem">
+        <rdfs:comment xml:lang="en">represents a poem</rdfs:comment>
+        <rdfs:label xml:lang="en">Poem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Writer -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Writer">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#writtes"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Book"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Poem1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Poem1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Poem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Writer1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Writer1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Writer"/>
+        <writtes rdf:resource="http://www.semanticweb.org/equipo/ontologies/2019/7/bookontology#Poem1"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
+
+
